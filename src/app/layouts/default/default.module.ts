@@ -5,7 +5,7 @@ import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.componen
 import { RouterModule } from '@angular/router';
 import { BookingComponent } from 'src/app/modules/booking/booking.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import {MatSidenavModule, MatDividerModule} from '@angular/material'
+import {MatSidenavModule, MatDividerModule, MatTableModule} from '@angular/material'
 
 
 
@@ -20,7 +20,8 @@ import {MatSidenavModule, MatDividerModule} from '@angular/material'
     RouterModule,
     SharedModule,
     MatSidenavModule,
-    MatDividerModule
+    MatDividerModule,
+    MatTableModule
   ]
 })
 export class DefaultModule { }

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { BookingComponent } from 'src/app/modules/booking/booking.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import {MatSidenavModule, MatDividerModule, MatTableModule} from '@angular/material'
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -21,7 +22,8 @@ import {MatSidenavModule, MatDividerModule, MatTableModule} from '@angular/mater
     SharedModule,
     MatSidenavModule,
     MatDividerModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule
   ]
 })
 export class DefaultModule { }

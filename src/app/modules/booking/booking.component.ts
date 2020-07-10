@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingDataService } from 'src/app/service/data/booking-data.service';
+import { Router } from '@angular/router';
+import {MatDialog,MatDialogConfig} from "@angular/material"
+import { BookingFormComponent } from '../booking-form/booking-form.component';
 
 export interface BookOrder {
   username: string;
@@ -32,7 +35,9 @@ export class BookingComponent implements OnInit {
   dataSource = BOOK_DATA;
 
   constructor(
-    private orderService:BookingDataService
+    private orderService:BookingDataService,
+    private router: Router,
+    private dialog:MatDialog
   ) { }
 
   ngOnInit() {
@@ -42,6 +47,11 @@ export class BookingComponent implements OnInit {
      this.dataSource=response;
    }
    )
+
+  }
+
+  onCreate(){
+    this.dialog.open(BookingFormComponent);
 
   }
 

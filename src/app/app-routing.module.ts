@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BookingComponent } from './modules/booking/booking.component';
+import { BookingFormComponent } from './modules/booking-form/booking-form.component';
 
 
 const routes: Routes = [{
@@ -14,6 +15,10 @@ const routes: Routes = [{
   },{
     path:'booking',
     component: BookingComponent
+  },
+  {
+    path:'booking-form',
+    component: BookingFormComponent
   }]
 
 }];

@@ -7,6 +7,8 @@ export interface BookOrder {
   place: string;
   time: Date;
   passenger:number;
+  status: string;
+  action: string;
 }
 
 const BOOK_DATA: BookOrder[] = [
@@ -26,7 +28,7 @@ const BOOK_DATA: BookOrder[] = [
 })
 export class BookingComponent implements OnInit {
 
-  displayedColumns: string[] = ['id', 'username', 'place', 'time', 'passenger'];
+  displayedColumns: string[] = ['id', 'username', 'place', 'time', 'passenger','status','action'];
   dataSource = BOOK_DATA;
 
   constructor(

@@ -51,7 +51,13 @@ export class BookingComponent implements OnInit {
   }
 
   onCreate(){
-    this.dialog.open(BookingFormComponent);
+
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+
+    this.dialog.open(BookingFormComponent,dialogConfig);
 
   }
 

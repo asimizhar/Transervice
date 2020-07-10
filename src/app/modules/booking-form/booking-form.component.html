@@ -1,1 +1,39 @@
-<p>booking-form works!</p>
+<div class="example-container">
+  <mat-form-field appearance="fill">
+    <mat-label>Place</mat-label>
+    <input matInput >
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Time</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label >Passenger</mat-label>
+    <input matInput >
+  </mat-form-field>
+  <br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Status</mat-label>
+    <mat-select>
+      <mat-option value="option">Pending</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+
+  <button mat-raised-button (click)="onSubmit()">
+    Confirm
+   </button>
+
+   <button mat-raised-button (click)="onCancel()">
+    Cancel
+   </button>
+  <!-- <mat-form-field appearance="fill">
+    <mat-label>Textarea</mat-label>
+    <textarea matInput></textarea>
+  </mat-form-field> -->
+</div>

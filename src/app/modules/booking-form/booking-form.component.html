@@ -1,37 +1,38 @@
 <div class="example-container">
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" style="width: 430px;">
     <mat-label>Place</mat-label>
-    <input matInput >
+    <input matInput required="required" >
   </mat-form-field>
   <br>
 
   <mat-form-field appearance="fill">
     <mat-label>Time</mat-label>
-    <input matInput>
+    <input matInput required="required">
   </mat-form-field>
-  <br>
 
-  <mat-form-field appearance="fill">
+  <mat-form-field appearance="fill" style="padding-left: 20px;" >
     <mat-label >Passenger</mat-label>
-    <input matInput >
+    <input matInput required="required">
   </mat-form-field>
   <br>
 
   <mat-form-field appearance="fill">
-    <mat-label>Status</mat-label>
-    <mat-select>
+    <mat-label >Status</mat-label>
+    <mat-select  required="required">
       <mat-option value="option">Pending</mat-option>
     </mat-select>
   </mat-form-field>
   <br>
 
+<div class="wrapper">
   <button mat-raised-button (click)="onSubmit()">
-    Confirm
+   Confirm
    </button>
-
+ <span style="padding-left:10px;"></span>
    <button mat-raised-button (click)="onCancel()">
     Cancel
    </button>
+  </div>
   <!-- <mat-form-field appearance="fill">
     <mat-label>Textarea</mat-label>
     <textarea matInput></textarea>

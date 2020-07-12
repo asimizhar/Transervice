@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from "@angular/material/dialog";
+import { ActivatedRoute, Router } from '@angular/router';
+import { BookingDataService } from 'src/app/service/data/booking-data.service';
+import { BookOrder } from '../booking/booking.component';
+import { DataSource } from '@angular/cdk/table';
 
 @Component({
   selector: 'app-booking-form',
@@ -7,9 +12,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingFormComponent implements OnInit {
 
-  constructor() { }
+  id:number
+  order: BookOrder
+
+  constructor(private dialogRef: MatDialogRef<BookingFormComponent>
+    ) { }
 
   ngOnInit() {
+
+}
+
+  onCancel() {
+    this.dialogRef.close();
+  }
+
+  onSubmit(){
+
   }
 
 }

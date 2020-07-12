@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BookingDataService } from 'src/app/service/data/booking-data.service';
-import { Router } from '@angular/router';
-import {MatDialog,MatDialogConfig} from "@angular/material"
+import {MatDialog} from "@angular/material"
 import { BookingFormComponent } from '../booking-form/booking-form.component';
 
 export interface BookOrder {
@@ -36,7 +35,6 @@ export class BookingComponent implements OnInit {
 
   constructor(
     private orderService:BookingDataService,
-    private router: Router,
     private dialog:MatDialog
   ) { }
 
@@ -51,13 +49,13 @@ export class BookingComponent implements OnInit {
   }
 
   onCreate(){
-
-    const dialogConfig = new MatDialogConfig();
-
-    dialogConfig.disableClose = true;
-    dialogConfig.autoFocus = true;
-
-    this.dialog.open(BookingFormComponent,dialogConfig);
+   
+    this.dialog.open(BookingFormComponent,{
+      height: '330px',
+      width: '500px',
+      disableClose:true,
+      autoFocus:true
+    });
 
   }
 

@@ -13,11 +13,11 @@ const routes: Routes = [{
     path:'',
     component: DashboardComponent
   },{
-    path:'booking',
+    path:'orders',
     component: BookingComponent
   },
   {
-    path:'booking-form',
+    path:'orders/:id',
     component: BookingFormComponent
   }]
 

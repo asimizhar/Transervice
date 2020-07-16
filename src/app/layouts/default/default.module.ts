@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import {MatSidenavModule, MatDividerModule, MatTableModule, MatDialogModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule} from '@angular/material'
 import { HttpClientModule } from '@angular/common/http';
 import { BookingFormComponent } from 'src/app/modules/booking-form/booking-form.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -32,7 +33,8 @@ import { BookingFormComponent } from 'src/app/modules/booking-form/booking-form.
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   entryComponents:[BookingFormComponent]
 })

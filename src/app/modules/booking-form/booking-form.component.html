@@ -1,25 +1,25 @@
 <div class="example-container">
-  <mat-form-field appearance="fill" style="width: 430px;">
-    <mat-label>Place</mat-label>
-    <input matInput required="required" >
+  <mat-form-field appearance="fill" style="width: 430px;" >
+    <mat-label >Place</mat-label>
+    <input matInput required="required" [(ngModel)]="order.place" >
   </mat-form-field>
   <br>
 
   <mat-form-field appearance="fill">
     <mat-label>Time</mat-label>
-    <input matInput required="required">
+    <input matInput required="required" [(ngModel)]="order.time">
   </mat-form-field>
 
   <mat-form-field appearance="fill" style="padding-left: 20px;" >
     <mat-label >Passenger</mat-label>
-    <input matInput required="required">
+    <input matInput required="required" [(ngModel)]="order.passenger">
   </mat-form-field>
   <br>
 
   <mat-form-field appearance="fill">
     <mat-label >Status</mat-label>
-    <mat-select  required="required">
-      <mat-option value="option">Pending</mat-option>
+    <mat-select  required="required" [(ngModel)]="order.status">
+      <mat-option value="Pending">Pending</mat-option>
     </mat-select>
   </mat-form-field>
   <br>

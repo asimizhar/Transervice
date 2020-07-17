@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from "@angular/material/dialog";
 import { ActivatedRoute, Router } from '@angular/router';
 import { BookingDataService } from 'src/app/service/data/booking-data.service';
-import { Order } from '../booking/booking.component';
+import { Order, BookingComponent } from '../booking/booking.component';
 
 
 @Component({
@@ -12,20 +12,21 @@ import { Order } from '../booking/booking.component';
 })
 export class BookingFormComponent implements OnInit {
 
-  id:number
-  passenger:number
-  order: Order
-
+  id:number;
+  passenger:number;
+  order: Order;
+ 
   constructor(
     private dialogRef: MatDialogRef<BookingFormComponent>,
     private orderService:BookingDataService,
     private route:ActivatedRoute,
     private router:Router
-    ) { }
+
+    ) {}
 
   ngOnInit() {
     this.id=this.route.snapshot.params['id'];
-    this.order=new Order(this.id,"asim",'',new Date(),this.passenger ," ","Take")
+    this.order=new Order(this.id,"asim",'',new Date(),this.passenger ," ")
 
     // if(this.id!=-1){
     // this.orderService.retrieveOrder('asim',this.id) 
@@ -34,6 +35,17 @@ export class BookingFormComponent implements OnInit {
     // )
     // }
 }
+
+refreshOrders(){
+  this.orderService.retrieveAllOrders('asim').subscribe(
+    response=>{
+      console.log(response);
+      this.order=response;
+    }
+    )
+   
+}
+
 
   onCancel() {
     this.dialogRef.close();
@@ -44,7 +56,7 @@ export class BookingFormComponent implements OnInit {
       .subscribe(
         data =>{
           console.log(data)
-          this.router.navigate(['orders'])
+          this.router.navigate([`orders`]);
         }
       )
 

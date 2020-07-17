@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
+import { DatePipe } from '@angular/common';
 
 
 @NgModule({
@@ -17,7 +18,9 @@ import { DefaultModule } from './layouts/default/default.module';
     BrowserAnimationsModule,
     DefaultModule
   ],
-  providers: [],
+  providers: [
+    DatePipe
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

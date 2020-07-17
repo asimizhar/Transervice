@@ -12,7 +12,6 @@ export class Order {
   time: Date,
   passenger:number,
   status: string,
-  action: string,
   ){
 
   }
@@ -37,7 +36,7 @@ export class BookingComponent implements OnInit {
 
   // orders: Order[]
 
-  displayedColumns: string[] = ['id', 'username', 'place', 'time', 'passenger','status','action'];
+  displayedColumns: string[] = ['id', 'username', 'place', 'time', 'passenger','status'];
   dataSource = orders;
 
   constructor(
@@ -47,13 +46,20 @@ export class BookingComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-   this.orderService.retrieveAllOrders('asim').subscribe(
-   response=>{
-     console.log(response);
-     this.dataSource=response;
-   }
-   )
 
+  this.refreshOrders();
+
+  }
+  
+
+  refreshOrders(){
+    this.orderService.retrieveAllOrders('asim').subscribe(
+      response=>{
+        console.log(response);
+        this.dataSource=response;
+      }
+      )
+     
   }
 
   onCreate(){
@@ -63,6 +69,7 @@ export class BookingComponent implements OnInit {
       disableClose:true,
       autoFocus:true,
     });
+    
     // this.router.navigate(['orders',-1])
 
   }

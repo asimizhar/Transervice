@@ -34,7 +34,7 @@ import { FormsModule } from '@angular/forms';
     MatOptionModule,
     MatSelectModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   entryComponents:[BookingFormComponent]
 })

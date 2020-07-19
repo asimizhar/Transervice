@@ -56,7 +56,7 @@ refreshOrders(){
       .subscribe(
         data =>{
           console.log(data)
-          this.router.navigate([`orders`]);
+          this.dialogRef.close();
         }
       )
 

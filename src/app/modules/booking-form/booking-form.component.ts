@@ -27,6 +27,7 @@ export class BookingFormComponent implements OnInit {
   ngOnInit() {
     this.id=this.route.snapshot.params['id'];
     this.order=new Order(this.id,"asim",'',new Date(),this.passenger ," ")
+  
 
     // if(this.id!=-1){
     // this.orderService.retrieveOrder('asim',this.id) 
@@ -34,16 +35,6 @@ export class BookingFormComponent implements OnInit {
     //   data => this.order= data
     // )
     // }
-}
-
-refreshOrders(){
-  this.orderService.retrieveAllOrders('asim').subscribe(
-    response=>{
-      console.log(response);
-      this.order=response;
-    }
-    )
-   
 }
 
 
@@ -56,7 +47,9 @@ refreshOrders(){
       .subscribe(
         data =>{
           console.log(data)
+          this.router.navigate(['']);
           this.dialogRef.close();
+
         }
       )
 

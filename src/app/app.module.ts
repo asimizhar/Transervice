@@ -6,17 +6,34 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DefaultModule } from './layouts/default/default.module';
 import { DatePipe } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { MatToolbarModule, MatCardModule, MatFormFieldModule, MatInputModule, MatListModule, MatButtonModule, MatRadioModule } from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
+    RegistrationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DefaultModule
+    DefaultModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatListModule,
+    MatButtonModule,
+    MatRadioModule,
+    HttpClientModule,
+    FormsModule
+    
   ],
   providers: [
     DatePipe

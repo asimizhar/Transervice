@@ -4,6 +4,8 @@ import { DefaultComponent } from './layouts/default/default.component';
 import { DashboardComponent } from './modules/dashboard/dashboard.component';
 import { BookingComponent } from './modules/booking/booking.component';
 import { BookingFormComponent } from './modules/booking-form/booking-form.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [{
@@ -20,8 +22,11 @@ const routes: Routes = [{
     path:'orders/:id',
     component: BookingFormComponent
   }]
+},
+{path:'register',component:RegistrationComponent},
+{path:'login', component: LoginComponent}
 
-}];
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

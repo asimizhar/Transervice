@@ -10,7 +10,8 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { MatToolbarModule, MatCardModule, MatFormFieldModule, MatInputModule, MatListModule, MatButtonModule, MatRadioModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     LoginComponent,
     RegistrationComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,9 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule,
     MatRadioModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    FlexLayoutModule
     
   ],
   providers: [

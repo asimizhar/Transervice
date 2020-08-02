@@ -1,0 +1,33 @@
+<div class="example-container">
+    <mat-form-field appearance="fill" style="width: 430px;" >
+      <mat-label >Name</mat-label>
+      <input matInput placeholder="Transporter Name" required="required" [(ngModel)]="transporter.name" >
+    </mat-form-field>
+    <br>
+  
+    <mat-form-field appearance="fill" style="width: 430px;" >
+      <mat-label >Detail</mat-label>
+      <input matInput required="required" [(ngModel)]="transporter.detail">
+    </mat-form-field>
+    <br>
+
+    <mat-label >Upload Picture</mat-label>
+    <br>
+    <input type="file" (change)="onFileChanged($event)">
+    <img [src]="imgURL" height="200" width="200" *ngIf="imgURL">
+      <br>
+      
+
+    <br>
+  
+  <div class="wrapper">
+    <button mat-raised-button (click)= "saveTransporter()">
+     Confirm
+     </button>
+   <span style="padding-left:10px;"></span>
+     <button mat-raised-button (click)= "onCancel()">
+      Cancel
+     </button>
+    </div>
+  
+  </div>

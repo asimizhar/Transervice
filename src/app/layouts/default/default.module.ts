@@ -9,6 +9,8 @@ import {MatSidenavModule, MatDividerModule, MatTableModule, MatDialogModule, Mat
 import { HttpClientModule } from '@angular/common/http';
 import { BookingFormComponent } from 'src/app/modules/booking-form/booking-form.component';
 import { FormsModule } from '@angular/forms';
+import { ReviewComponent } from 'src/app/modules/review/review.component';
+import { TransportFormComponent } from 'src/app/modules/transport-form/transport-form.component';
 
 
 
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     DefaultComponent,
     DashboardComponent,
     BookingComponent,
-    BookingFormComponent
+    BookingFormComponent,
+    ReviewComponent,
+    TransportFormComponent
   ],
   imports: [
     CommonModule,

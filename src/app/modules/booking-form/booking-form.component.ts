@@ -26,7 +26,7 @@ export class BookingFormComponent implements OnInit {
 
   ngOnInit() {
     this.id=this.route.snapshot.params['id'];
-    this.order=new Order(this.id,"asim",'',new Date(),this.passenger ," ")
+    this.order=new Order(this.id,"Asim",'',new Date(),this.passenger ," ")
   
 
     // if(this.id!=-1){
@@ -37,19 +37,23 @@ export class BookingFormComponent implements OnInit {
     // }
 }
 
+redirectTo(uri:string){
+  this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+  this.router.navigate(['orders']));
+}
+
 
   onCancel() {
     this.dialogRef.close();
   }
 
   onSubmit(){
-      this.orderService.createOrder('asim',this.order)
+      this.orderService.createOrder('Asim',this.order)
       .subscribe(
         data =>{
           console.log(data)
-          this.router.navigate(['']);
+          this.redirectTo('orders');
           this.dialogRef.close();
-
         }
       )
 

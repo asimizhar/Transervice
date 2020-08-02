@@ -1,4 +1,4 @@
-<mat-toolbar>
+<!-- <mat-toolbar>
   <span>LOGIN</span>
 </mat-toolbar>
 <mat-card class="my-card">
@@ -24,4 +24,41 @@
       <button mat-raised-button (click)="loginUser()" color="primary">LOGIN</button>
    </mat-card-actions>
    <small style="padding-left: 500px;" (click)="gotoregistration()">New user? Register here</small>
-</mat-card>
+</mat-card> -->
+
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+   <mat-card class="box">
+    <div class="logopicture">
+      <img [src]="logo"> 
+    </div>
+     <mat-card-header>
+       <mat-card-title>Log in</mat-card-title>
+     </mat-card-header>
+ 
+     <form class="example-form" (ngSubmit)="loginUser()">
+       <mat-card-content>
+         <mat-form-field class="example-full-width">
+          <mat-label for="email">Email</mat-label>
+           <input matInput type="email" placeholder="Enter Email" name="email" [(ngModel)]="user.emailId" >
+         </mat-form-field>
+ 
+         <mat-form-field class="example-full-width">
+            <mat-label for="pwd">Password</mat-label>
+           <input matInput type="password" placeholder="Enter Password" name="password" [(ngModel)]="user.password">
+         </mat-form-field>
+         <br>
+         <small style="color:red">{{msg}}</small>
+       </mat-card-content>
+       <div>
+        <label><input type="checkbox" name="remember">Remember me</label>
+     </div>
+     <br>
+       <button mat-stroked-button type="submit" color="accent" class="btn-block">Log in</button>
+       <small (click)="gotoregistration()">New user? Register here</small>
+     </form>
+     
+   </mat-card>
+   
+ 
+ </div>

@@ -5,7 +5,7 @@ import { DashboardComponent } from 'src/app/modules/dashboard/dashboard.componen
 import { RouterModule } from '@angular/router';
 import { BookingComponent } from 'src/app/modules/booking/booking.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import {MatSidenavModule, MatDividerModule, MatTableModule, MatDialogModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule} from '@angular/material'
+import {MatSidenavModule, MatDividerModule, MatTableModule, MatDialogModule, MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, MatOptionModule, MatSelectModule, MatCardModule} from '@angular/material'
 import { HttpClientModule } from '@angular/common/http';
 import { BookingFormComponent } from 'src/app/modules/booking-form/booking-form.component';
 import { FormsModule } from '@angular/forms';
@@ -37,6 +37,7 @@ import { TransportFormComponent } from 'src/app/modules/transport-form/transport
     MatInputModule,
     MatOptionModule,
     MatSelectModule,
+    MatCardModule,
     HttpClientModule,
     FormsModule,
   ],

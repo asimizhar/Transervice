@@ -13,4 +13,6 @@ mat-drawer-container{
 
 mat-drawer-content{
     padding:20px;
+    background-image: url('src/assets/images/white_image.jpg'); 
+    background-size: cover; height: 100% !important;
 }

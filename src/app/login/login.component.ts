@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 logo:string="assets/images/transervice.png";
+background:string="assets/images/violet_background.jpg";
 
  user= new User();
  msg='';
@@ -26,7 +27,7 @@ logo:string="assets/images/transervice.png";
     this._service.loginUserFromRemote(this.user).subscribe(
       data=>{ 
         console.log("response received");
-        this._router.navigate([''])
+        this._router.navigate(['dashboard'])
 
       },
       error=>{console.log("exception occured");

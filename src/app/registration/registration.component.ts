@@ -34,7 +34,7 @@ export class RegistrationComponent implements OnInit {
   }
 
   gotologin(){
-    this._router.navigate(['login']);
+    this._router.navigate(['']);
   }
 
 }

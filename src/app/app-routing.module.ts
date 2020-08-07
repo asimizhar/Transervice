@@ -10,11 +10,14 @@ import { ReviewComponent } from './modules/review/review.component';
 import { TransportFormComponent } from './modules/transport-form/transport-form.component';
 
 
-const routes: Routes = [{
+const routes: Routes = [
+  {path:'', component: LoginComponent},
+  {path:'register',component:RegistrationComponent},
+  {
   path: '',
   component: DefaultComponent,
   children: [{
-    path:'',
+    path:'dashboard',
     component: DashboardComponent,
   },{
     path:'orders',
@@ -33,13 +36,15 @@ const routes: Routes = [{
     component: TransportFormComponent
   },]
 },
-{path:'register',component:RegistrationComponent},
-{path:'login', component: LoginComponent}
+
+
 
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule { }
+
+

@@ -1,37 +1,5 @@
-<!-- <mat-toolbar>
-    <span>Registration</span>
- </mat-toolbar>
- <mat-card class="my-card">
-    <mat-card-content>
-        <form class="my-form" (ngSubmit)="register()" >
-            <mat-form-field class="full-width">
-                <mat-label >User Name</mat-label>
-                <input  matInput type="text"  placeholder="Username"  name="uname" #username="ngModel" [(ngModel)]="user.userName" required >
-                <mat-error>This field is mandatory</mat-error>
-             </mat-form-field>
-             <mat-form-field class="full-width">
-                <mat-label >Email</mat-label>
-                <input  matInput type="email"   placeholder="Email" #email="ngModel" name="email"  [(ngModel)]="user.emailId" required>
-                <mat-error>Invalid email address</mat-error>
-             </mat-form-field>
-             <mat-form-field class="full-width">
-                <mat-label >Password</mat-label>
-                <input  matInput type="password"   placeholder="Password"  name="password"  #password ="ngModel"  [(ngModel)]="user.password" required>
-                <mat-error>Invalid passwordy</mat-error>
-             </mat-form-field>
-             <mat-form-field class="full-width">
-                <mat-label>Confirm Password</mat-label>
-                <input  matInput type="password"  placeholder="Password"  name="cpassword" #cpassword="ngModel"  (ngModel)="user.password" required>
-                <mat-error>Invalid passwordy</mat-error>
-             </mat-form-field>
-        </form>
-    </mat-card-content>
-    <mat-card-actions>
-        <button mat-raised-button type="submit" [disabled]="service.form.invalid" color="primary">REGISTER</button>
-    </mat-card-actions>
- </mat-card> -->
-
- <div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center" style="background-image: url('assets/images/violet_background.jpg'); 
+background-size: cover; height: 100% !important;">
    <mat-card class="box">
      <mat-card-header>
        <mat-card-title>Register</mat-card-title>
